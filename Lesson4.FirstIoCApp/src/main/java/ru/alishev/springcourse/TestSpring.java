@@ -1,15 +1,16 @@
 package ru.alishev.springcourse;
 
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**
  * @author Neil Alishev
  */
 public class TestSpring {
     public static void main(String[] args) {
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
-                "applicationContext.xml"
-        );
+
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(SpringConfig.class);
+
 
 //        MusicPlayer musicPlayer = context.getBean("musicPlayer", MusicPlayer.class);
 //
